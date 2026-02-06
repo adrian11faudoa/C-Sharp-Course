@@ -81,7 +81,7 @@ When converting the 'M' is not need it, because the Convert.ToDecimal is makeing
 
     age /= 2; //Result = 2 (Incorrect)
 
-it needs to have a Data Type of Double to represent the correct value
+It needs to have a Data Type of Double to represent the correct value
 
     double age4 = 44;
     age4 /= 10; //Result = 4.4 (Correct)
@@ -98,14 +98,14 @@ it needs to have a Data Type of Double to represent the correct value
     Console.WriteLine(i); //Prints 1
     Console.WriteLine(++i); //Prints 2
 
-Remainder %
+Remainder (%)
 
     int firstNum = 10;
     int secNum = 3;
     Console.WriteLine(firstNum % secNum); //Result = 1
 
 
-### Var Keyword
+## Var Keyword
     var age3 = 23; //Int32
     var bigNumber3 = -90000000L; //Int64
     var neg3 = -55.2D; //Double
@@ -262,8 +262,6 @@ Remainder %
             Console.WriteLine("Wrong Answer!");
             Console.WriteLine();
         }
-
-
     }
     Console.WriteLine("Well Done!");
 
@@ -283,7 +281,6 @@ Remainder %
 
 ## Conditional Operator or Ternary Operator , Condition ? True : False
     int age = 10;
-
     /*
     if (age >= 0)
     { Console.WriteLine("Valid"); }
@@ -424,7 +421,7 @@ Remainder %
     Console.WriteLine($"Your name is {name}, and your age is {age}"); //String Interpolation
 
 
-##  String Concatenation
+## String Concatenation
     string name = "Aba";
     int age = 23;
 
