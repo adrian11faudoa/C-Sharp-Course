@@ -1,50 +1,57 @@
 # C# Course 
 
-### Console Write, Convert Data Types
+## Console Write, Convert Data Types
     Console.WriteLine("Hello World!");
     string textAge = "23";
     int age = Convert.ToInt32(textAge);
     Console.WriteLine(age);
 
 
-### Data Types: Int - Long - Double - Float(Single) - Decimal
-    - The 'L' is to tell the compiler to threat the variable as Int64
+## Data Types: Int - Long - Double - Float(Single) - Decimal
+The 'L' is to tell the compiler to threat the variable as Int64
+    
     long bigNumber2 = -90000000L;
     string textBigNumber = "-90000000";
 
-    - When converting the 'L' is not need it, because the Convert.ToInt64 is makeing the variable an Int64
+When converting the 'L' is not need it, because the Convert.ToInt64 is makeing the variable an Int64
+    
     long bigNumber = Convert.ToInt64(textBigNumber);
     Console.WriteLine(bigNumber);
 
-
-    - The 'D' is to tell the compiler to threat the variable as Double
+The 'D' is to tell the compiler to threat the variable as Double
+    
     double neg2 = -55.2D;
     string textNegative = "55.2";
 
-    - When converting the 'D' is not need it, because the Convert.ToDouble is makeing the variable a Double
+When converting the 'D' is not need it, because the Convert.ToDouble is makeing the variable a Double
+    
     double neg = Convert.ToDouble(textNegative);
     Console.WriteLine(neg);
 
 
-    - The 'F' is to tell the compiler to threat the variable as Float
+The 'F' is to tell the compiler to threat the variable as Float
+    
     float precision2 = 5.000001F;
     string textPrecision = "5.000001";
     
-    - When converting the 'F' is not need it, because the Convert.ToSingle is makeing the variable a Single or Float
+When converting the 'F' is not need it, because the Convert.ToSingle is makeing the variable a Single or Float
+
     float precision = Convert.ToSingle(textPrecision);
     Console.WriteLine(precision);
     
     
-    - The 'M' is to tell the compiler to threat the variable as Decimal
+The 'M' is to tell the compiler to threat the variable as Decimal
+
     decimal money2 = 14.99M;
     string textMoney = "14.99";
     
-    - When converting the 'M' is not need it, because the Convert.ToDecimal is makeing the variable a Decimal
+When converting the 'M' is not need it, because the Convert.ToDecimal is makeing the variable a Decimal
+
     decimal money = Convert.ToDecimal(textMoney);
     Console.WriteLine(money);
 
 
-### Data Types: String - Char
+## Data Types: String - Char
     string name = "Aba";
     char letter = 'a';
 
@@ -55,7 +62,7 @@
     Console.WriteLine(letter);
 
 
-### Data Type: Boolean 
+## Data Type: Boolean 
     bool value = true;
     bool isMale = true;
     Console.WriteLine(isMale); //Prints True
@@ -63,7 +70,7 @@
     Console.WriteLine(isMale); //Prints False
 
 
-### Operators: + - * /
+## Operators: + - * /
     //int age = 23
     age++;
     age = age + 1;
@@ -73,7 +80,9 @@
     age *= 2;
 
     age /= 2; //Result = 2 (Incorrect)
-    - it needs to have a Data Type of Double to represent the correct value
+
+it needs to have a Data Type of Double to represent the correct value
+
     double age4 = 44;
     age4 /= 10; //Result = 4.4 (Correct)
 
@@ -89,7 +98,8 @@
     Console.WriteLine(i); //Prints 1
     Console.WriteLine(++i); //Prints 2
 
-    - Remainder %
+Remainder %
+
     int firstNum = 10;
     int secNum = 3;
     Console.WriteLine(firstNum % secNum); //Result = 1
@@ -105,7 +115,7 @@
     var letter2 = 'a'; //Char
 
 
-### Const Keyword
+## Const Keyword
     const int vat = 20;
     //vat = 10; throws an error
 
@@ -117,7 +127,7 @@
     Console.WriteLine(balance * percentage);
 
 
-### Odd - Even Exercise
+## Exercise: Odd - Even 
     int num1 = 10;
     int num2 = 2;
     int remainder = num1 % num2;
@@ -128,7 +138,7 @@
     Console.WriteLine(remainder); //Result 1
 
 
-### Console Input - Output
+## Console Input - Output
     Console.Write("Enter your name: ");
     string name3 = Console.ReadLine();
 
@@ -142,7 +152,7 @@
     Console.WriteLine("Your name is " + name3 + " and your age is " + age5);
 
 
-### if Statement == > >= < <= != || &&
+## if Statement == > >= < <= != || &&
     if (age5 < 0 || age > 150) //OR
     {   Console.WriteLine("Invalid Age!");  }
     else
@@ -170,7 +180,7 @@
     {   Console.WriteLine("Wrong Answer!"); }
 
 
-### Switch Statements
+## Switch Statements
     Console.Write("Enter a day of the week: ");
     int day = Convert.ToInt32(Console.ReadLine());
 
@@ -202,7 +212,7 @@
     }
 
 
-### For Loop
+## For Loop
     Console.Write("What do you want to repeat?");
     string message = Console.ReadLine();
 
@@ -222,7 +232,7 @@
     */
 
 
-### While Loop - Do While Loop
+## While Loop - Do While Loop
     /*int i = 0;
     while (i < 10)
     { Console.WriteLine(i);
@@ -271,7 +281,7 @@
     Console.WriteLine("Well Done!");
 
 
-### Conditional Operator or Ternary Operator , Condition ? True : False
+## Conditional Operator or Ternary Operator , Condition ? True : False
     int age = 10;
 
     /*
@@ -285,7 +295,7 @@
     Console.WriteLine(result);
 
 
-### Numeric Formatting
+## Numeric Formatting
     double value = 1000D / 12.34D;
 
     Console.WriteLine(value);
@@ -309,7 +319,7 @@
     Console.WriteLine(money.ToString("C", CultureInfo.CreateSpecificCulture("en-AU")));
 
 
-### TryParse Function
+## TryParse Function
     bool success = true;
     //bool success = int.TryParse(numInput, out int num)
 
@@ -330,7 +340,7 @@
     }
 
 
-### Exercise: Times Table
+## Exercise: Times Table
     Console.Write("Enter a number: ");
     int num = Convert.ToInt32(Console.ReadLine());
 
@@ -340,7 +350,7 @@
     }
 
 
-### Exercise: Fizz Buzz Game
+## Exercise: Fizz Buzz Game
     bool threeDiv = false;
     bool fiveDiv = false;
 
@@ -368,7 +378,7 @@
     }
 
 
-### Verbatim String Literal @
+## Verbatim String Literal @
     // \ the back slash is used for escape characters, like \t \n
     string speech = "He said \"something\""; //Example
 
@@ -393,7 +403,7 @@
     Console.WriteLine(name);
 
 
-### String Formatting ({0})
+## String Formatting ({0})
     string name = "Aba";
     int age = 23;
 
@@ -406,7 +416,7 @@
     Console.WriteLine("Your name is {0}, and your age is {1}", name, age); //Composite Formatting
 
 
-### String Interpolation ($)
+## String Interpolation ($)
     string name = "Aba";
     int age = 23;
 
@@ -414,7 +424,7 @@
     Console.WriteLine($"Your name is {name}, and your age is {age}"); //String Interpolation
 
 
-###  String Concatenation
+##  String Concatenation
     string name = "Aba";
     int age = 23;
 
@@ -429,7 +439,7 @@
     Console.WriteLine(string.Concat(names));
 
 
-### Empty String
+## Empty String
     Console.Write("Enter your name: ");
     string name = Console.ReadLine();
     //name = "";
@@ -444,7 +454,7 @@
     }
 
 
-### String Equals Function
+## String Equals Function
     string message = "Hello";
     string compare = "Hello";
 
@@ -481,7 +491,7 @@
         Console.WriteLine("Different");
 
 
-### String Iteration Loop
+## String Iteration Loop
     string message = "C# is awesome";
 
     /*
@@ -512,7 +522,7 @@
     Console.WriteLine(contains);
 
 
-### String IsNullOrEmpty Function
+## String IsNullOrEmpty Function
     Console.Write("Enter your name: ");
     //string name = Console.ReadLine();
     string name = null;
@@ -534,7 +544,7 @@
     }
 
 
-### Exercise: Print String in Reverse
+## Exercise: Print String in Reverse
     Console.Write("Enter your message: ");
     string message = Console.ReadLine();
 
@@ -551,7 +561,7 @@
     }
 
 
-### Excersise: Password Checker
+## Excersise: Password Checker
     Console.Write("Enter password: ");
     string password = Console.ReadLine();
             
@@ -590,7 +600,7 @@
     }
 
 
-### Arrays
+## Arrays
     int num1 = 5;
     int num2 = 10;
     int num3 = 15;
@@ -630,7 +640,7 @@
     }
 
 
-### Exercise: Triangle
+## Exercise: Triangle
     //Array Solution
     const int angleCount = 3;
     int[] angles = new int[angleCount];
@@ -664,7 +674,7 @@
 
     Console.WriteLine(angleSum == 180 ? "Valid": "Invalid");
 
-### Array Sorting
+## Array Sorting
     int[] numbers = new int[]
     {
         9, 2, 3, 1, 5, 0, 7, 8, 9
@@ -678,7 +688,7 @@
     } 
 
 
-### Array Reversal
+## Array Reversal
     int[] numbers = new int[]
     {
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -708,7 +718,7 @@
     */
 
 
-### Array Clearing
+## Array Clearing
     int[] numbers = new int[]
     { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -742,7 +752,7 @@
     }
 
 
-### Array IndexOf
+## Array IndexOf
     int[] numbers = new int[]
     {
         90, 199, 22, 50, 30
@@ -782,7 +792,7 @@
     }
 
 
-### Lists <>
+## Lists <>
     int[] numbers = new int[3]
     {
         1, 2, 3
@@ -812,81 +822,81 @@
 
 
 ## Dictionary
-//P1
-Dictionary<int, string> names = new Dictionary<int, string>
-{
-    //Key Value Pairs
-    { 1, "Alice" },
-    { 2, "Aba" },
-    { 3, "Rabbit" }
-};
+    //P1
+    Dictionary<int, string> names = new Dictionary<int, string>
+    {
+        //Key Value Pairs
+        { 1, "Alice" },
+        { 2, "Aba" },
+        { 3, "Rabbit" }
+    };
 
-for (int i = 0; i < names.Count; i++)
-{
-    KeyValuePair<int, string> pair = names.ElementAt(i);
-    Console.WriteLine($"{pair.Key} - {pair.Value}");
-};
+    for (int i = 0; i < names.Count; i++)
+    {
+        KeyValuePair<int, string> pair = names.ElementAt(i);
+        Console.WriteLine($"{pair.Key} - {pair.Value}");
+    };
 
-Console.WriteLine();
+    Console.WriteLine();
 
-foreach (var item in names) //var is same as KeyValuePair<int, string>
-{
-    Console.WriteLine($"{item.Key} - {item.Value}");
-}
+    foreach (var item in names) //var is same as KeyValuePair<int, string>
+    {
+        Console.WriteLine($"{item.Key} - {item.Value}");
+    }
 
-//P2
-Dictionary<string, string> teachers = new Dictionary<string, string>
-{
-    {  "Math", "Mr. Smith"  },
-    { "Science", "Ms. Johnson" },
-    { "History", "Mrs. Brown"  }
-};
+    //P2
+    Dictionary<string, string> teachers = new Dictionary<string, string>
+    {
+        {  "Math", "Mr. Smith"  },
+        { "Science", "Ms. Johnson" },
+        { "History", "Mrs. Brown"  }
+    };
 
-if (teachers.TryGetValue("Math", out string teacher))
-{
-    Console.WriteLine(teacher);
-    teachers["Math"] = "Joe";
-}
-else
-{
-    Console.WriteLine("Math teacher not found");
-}
+    if (teachers.TryGetValue("Math", out string teacher))
+    {
+        Console.WriteLine(teacher);
+        teachers["Math"] = "Joe";
+    }
+    else
+    {
+        Console.WriteLine("Math teacher not found");
+    }
 
-if (teachers.ContainsKey("Math"))
-{
-    teachers.Remove("Math");
-}
-else
-{
-    Console.WriteLine("Math not found");
-}
+    if (teachers.ContainsKey("Math"))
+    {
+        teachers.Remove("Math");
+    }
+    else
+    {
+        Console.WriteLine("Math not found");
+    }
 
 
 ##  
 
 
-### 
+##
 
 
-### 
+## 
 
 
-### 
+## 
 
 
-### 
+## 
 
 
-### 
+## 
 
 
-### 
+## 
 
 
-### 
+## 
 
 
-### 
+## 
 
 
 ### 
