@@ -811,10 +811,58 @@
     }
 
 
-### 
+## Dictionary
+//P1
+Dictionary<int, string> names = new Dictionary<int, string>
+{
+    //Key Value Pairs
+    { 1, "Alice" },
+    { 2, "Aba" },
+    { 3, "Rabbit" }
+};
+
+for (int i = 0; i < names.Count; i++)
+{
+    KeyValuePair<int, string> pair = names.ElementAt(i);
+    Console.WriteLine($"{pair.Key} - {pair.Value}");
+};
+
+Console.WriteLine();
+
+foreach (var item in names) //var is same as KeyValuePair<int, string>
+{
+    Console.WriteLine($"{item.Key} - {item.Value}");
+}
+
+//P2
+Dictionary<string, string> teachers = new Dictionary<string, string>
+{
+    {  "Math", "Mr. Smith"  },
+    { "Science", "Ms. Johnson" },
+    { "History", "Mrs. Brown"  }
+};
+
+if (teachers.TryGetValue("Math", out string teacher))
+{
+    Console.WriteLine(teacher);
+    teachers["Math"] = "Joe";
+}
+else
+{
+    Console.WriteLine("Math teacher not found");
+}
+
+if (teachers.ContainsKey("Math"))
+{
+    teachers.Remove("Math");
+}
+else
+{
+    Console.WriteLine("Math not found");
+}
 
 
-### 
+##  
 
 
 ### 

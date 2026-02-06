@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 
-//Dictionary
+//Exercise: Odd / Even Number Split
 
 
 
-Console.ReadLine();
+    Console.ReadLine();
