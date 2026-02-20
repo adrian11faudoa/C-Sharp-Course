@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-//Exercise: Odd / Even Number Split
+//
 
 
 
