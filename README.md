@@ -869,7 +869,7 @@ Remainder (%)
     }
 
 
-##  Exercise: Odd / Even Number Split
+## Exercise: Odd / Even Number Split
 
 
 ## Exercise: Array of Multiples
@@ -914,43 +914,43 @@ Remainder (%)
 ## Printing Error Messages
 
 
-### Exercise: Custom TryParse
+## Exercise: Custom TryParse
 
 
-### Dabugging
+## Dabugging
 
 
-### Local / auto Window 
+## Local / auto Window 
 
 
-### Watch Window
+## Watch Window
 
 
-### Exercise: Fix Logic Error
+## Exercise: Fix Logic Error
 
 
-### Structures
+## Structures
 
 
-### Classes
+## Classes
 
 
-### Class Functions
+## Class Functions
 
 
-### Class Fields 
+## Class Fields 
 
 
-### Class Variable / Function Scope
+## Class Variable / Function Scope
 
 
-### Class Properties
+## Class Properties
 
 
-### Class ToString Function Overrid
+## Class ToString Function Overrid
 
 
-### Outro?
+## Outro?
 
 
 
