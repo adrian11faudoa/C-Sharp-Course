@@ -872,85 +872,85 @@ Remainder (%)
 ##  Exercise: Odd / Even Number Split
 
 
-##
+## Exercise: Array of Multiples
 
 
-## 
+## Functions
 
 
-## 
+## Void Functions 
 
 
-## 
+## Return Type Functions
 
 
-## 
+## Function Parameters
 
 
-## 
+## Optional Parameters
 
 
-## 
+## Named Parameters
 
 
-## 
+## Out Parameters
 
 
-## 
+## Reference Parameters
 
 
-## 
+## Exercise: Area of a Triangle
 
 
-## 
+## Exercise: Sum of int Array
 
 
-## 
+## Exception Handling
 
 
-## 
+## Try... catch
 
 
-## 
+## Printing Error Messages
 
 
-### 
+### Exercise: Custom TryParse
 
 
-### 
+### Dabugging
 
 
-### 
+### Local / auto Window 
 
 
-### 
+### Watch Window
 
 
-### 
+### Exercise: Fix Logic Error
 
 
-### 
+### Structures
 
 
-### 
+### Classes
 
 
-### 
+### Class Functions
 
 
-### 
+### Class Fields 
 
 
-### 
+### Class Variable / Function Scope
 
 
-### 
+### Class Properties
 
 
-### 
+### Class ToString Function Overrid
 
 
-### 
+### Outro?
 
 
 
