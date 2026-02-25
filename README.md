@@ -378,7 +378,8 @@ TryParse is a method that attempts to convert a string representation of a numbe
 
 
 ## Verbatim String Literal @
-    // \ the back slash is used for escape characters, like \t \n
+Verbatim: @ negate all the escape characters, \ the back slash is used for escape characters, like \t \n
+
     string speech = "He said \"something\""; //Example
 
     string path = "C:\\Users\\CoffeeNCode\\Desktop\\#C Course\nNew line test";
@@ -390,7 +391,7 @@ TryParse is a method that attempts to convert a string representation of a numbe
     //+ to Concatenate 2 Variables
     //"Your name is " + name
 
-    //Verbatim: @ negate all the escape characters
+    
     path = @"C:\Users\CoffeeNCode\Desktop\#C Course\n";
     path = @"C:\Users\CoffeeNCode\Desktop\#C Course" + "\nNew line test";
     Console.WriteLine(path);
@@ -879,7 +880,34 @@ It allows for fast retrieval of values based on their associated keys.
 
 
 ## Exercise: Odd / Even Number Split
+    List<int> odd = new List<int>(); 
+    List<int> even = new List<int>(); 
 
+    for (int i = 0; i < 20; i++)
+    {
+        if (i % 2 == 0)
+        {
+            even.Add(i);
+        }
+        else
+        {
+            odd.Add(i);
+        }
+    }
+
+    Console.WriteLine("Printing even numbers");
+
+    foreach (var item in even)
+    {
+        Console.Write($"{item } ");
+    }
+
+    Console.WriteLine(Environment.NewLine + "Printing odd numbers");
+
+    foreach (var item in odd)
+    {
+        Console.Write($"{item} ");
+    }
 
 ## Exercise: Array of Multiples
 
