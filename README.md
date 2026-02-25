@@ -909,7 +909,22 @@ It allows for fast retrieval of values based on their associated keys.
         Console.Write($"{item} ");
     }
 
+
 ## Exercise: Array of Multiples
+    int num = 7;
+    int length = 5;
+    int[] result = new int[length];
+    int counter = 0;
+
+    for (int i = 1; i <= result.Length; i++, counter++)
+    {
+        result[counter] = num * i;
+    }
+
+    foreach (int item in result)
+    {
+        Console.Write($"{item} ");
+    }
 
 
 ## Functions
