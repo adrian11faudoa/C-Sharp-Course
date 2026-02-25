@@ -317,6 +317,8 @@ Remainder (%)
 
 
 ## TryParse Function
+TryParse is a method that attempts to convert a string representation of a number to its numeric equivalent.
+
     bool success = true;
     //bool success = int.TryParse(numInput, out int num)
 
@@ -598,6 +600,8 @@ Remainder (%)
 
 
 ## Arrays
+An array is a data structure that can hold a fixed number of values of the same type.
+
     int num1 = 5;
     int num2 = 10;
     int num3 = 15;
@@ -790,6 +794,8 @@ Remainder (%)
 
 
 ## Lists <>
+One of the main differences between an Array and a List is that a List can grow and shrink in size, while an Array has a fixed size.
+
     int[] numbers = new int[3]
     {
         1, 2, 3
@@ -819,6 +825,9 @@ Remainder (%)
 
 
 ## Dictionary
+A Dictionary is a collection of key-value pairs, where each key is unique and maps to a specific value. 
+It allows for fast retrieval of values based on their associated keys.
+    
     //P1
     Dictionary<int, string> names = new Dictionary<int, string>
     {
