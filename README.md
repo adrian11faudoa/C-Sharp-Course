@@ -975,6 +975,25 @@ void: means that the function does not return a value
 
 
 ## Void Functions 
+    static void Main(string[] args)
+    {
+        WelcomeMessage();
+        CreateAndPrintAnArray();
+    }
+
+    static void WelcomeMessage()
+    {
+        Console.WriteLine("Welcome to C# Programming!");
+    }
+
+    static void CreateAndPrintAnArray()
+    {
+        int[] numbers = new int[5] { 1, 2, 3, 4, 5 };
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
 
 
 ## Return Type Functions
