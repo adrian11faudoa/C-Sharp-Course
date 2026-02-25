@@ -927,7 +927,51 @@ It allows for fast retrieval of values based on their associated keys.
     }
 
 
-## Functions
+## Functions / Methods
+Function: is a block of code that performs a specific task and can be reused throughout a program
+
+private (default): means that the function can only be used within the class it is defined in
+
+public: means any code can use it, even from other files
+
+static: means that the function belongs to the class and can be called without creating an instance of the class
+
+void: means that the function does not return a value    
+
+    public static void MyFunction()
+    {
+        Console.WriteLine("Hello from MyFunction!");
+    }
+
+<br>
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Test test = new Test();
+            test.Welcome();
+
+            Programm.Message();
+        }
+    }
+
+    class Test
+    {
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome, World!");
+        }
+    }
+
+    class Programm
+    {
+        public static void Message()
+        {
+            Test test = new Test();
+            test.Welcome();
+        }
+    }
 
 
 ## Void Functions 
