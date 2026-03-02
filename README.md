@@ -1118,7 +1118,28 @@ void: means that the function does not return a value
 
 
 ## Optional Parameters
+    static void Main(string[] args)
+    {
+        int result = Add(5);
+        Console.WriteLine(result);
 
+        PrintName();
+
+        Console.ReadLine();
+    }
+
+    static void PrintName(string name = "Aba")
+    {
+        Console.WriteLine($"My name is {name}");
+    }
+
+    //static int Add(int a, int b = 50)
+    //static int Add(int a, int b = default)
+    //static int Add(int a, int b = 0)
+    static int Add(int a, [Optional] int b)
+    {
+        return a + b;
+    }
 
 
 ## Named Parameters
