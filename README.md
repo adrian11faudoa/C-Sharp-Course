@@ -997,38 +997,77 @@ void: means that the function does not return a value
 
 
 ## Return Type Functions
-
-    //static string name = "Aba"; Global variable
-
-    static void Main(string[] args)
+    class Program
     {
-        Console.Title = $"{ReturnName()} - {ReturnAge()}";
-        PrintIntro();
+        //static string name = "Aba"; Global variable
 
+        static void Main(string[] args)
+        {
+            Console.Title = $"{ReturnName()} - {ReturnAge()}";
+            PrintIntro();
 
-        Console.ReadLine();
+            int[] numbers = new int[3];
 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = ReadNumberFromConsole();
+            }
+    
+            foreach (int number in numbers)
+            {
+                Console.Write($"{number} ");
+            }
+
+            Console.WriteLine();
+
+            int[] newNumbers = CreateRandomArray();
+
+            foreach (int number in newNumbers)
+            {
+                Console.Write($"{number} ");
+            }
+
+            Console.ReadLine();
+        }
+
+        static int[] CreateRandomArray()
+        {
+            /*
+            int[] numbers = new int[3]
+            {
+                0, 1, 2
+            };
+            return numbers;
+            */
+            
+            return new int[3]{ 0, 1, 2 };
+        }
+
+        static int ReadNumberFromConsole()
+        {
+            Console.Write("Enter a number: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        static string ReturnName()
+        {
+            return "Aba";
+        }
+
+        static int ReturnAge()
+        {
+            return 23;
+        }
+
+        static void PrintIntro()
+        {
+            string name = ReturnName();
+            int age = ReturnAge(); 
+            string output = $"Hello my name is {name} and my age is {age}";
+            Console.WriteLine(output);
+            //Console.WriteLine($"Hello my name is {ReturnName()} and my age is {ReturnAge()}");
+        }
     }
-
-    static string ReturnName()
-    {
-        return "Aba";
-    }
-    static int ReturnAge()
-    {
-        return 23;
-    }
-
-    static void PrintIntro()
-    {
-        string name = ReturnName();
-        int age = ReturnAge(); 
-        string output = $"Hello my name is {name} and my age is {age}";
-        Console.WriteLine(output);
-        //Console.WriteLine($"Hello my name is {ReturnName()} and my age is {ReturnAge()}");
-    }
-
-
 
 
 ## Function Parameters
