@@ -1143,7 +1143,26 @@ void: means that the function does not return a value
 
 
 ## Named Parameters
+    static void Main(string[] args)
+    {
+        string nameInput = "Aba";
+        int ageInput = 23;
+        string addressInput = "123 Main St";
 
+        //PrintInfo(name, age, address);
+        PrintInfo(age: ageInput, 
+                  name: nameInput, 
+                  address: addressInput);
+
+        Console.ReadLine();
+    }
+
+    static void PrintInfo(string name, int age, string address)
+    {
+        Console.WriteLine($"Name: {name}");
+        Console.WriteLine($"Age: {age}");
+        Console.WriteLine($"Address: {address}");
+    }
 
 ## Out Parameters
 
