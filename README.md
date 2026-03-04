@@ -106,6 +106,8 @@ Remainder (%)
 
 
 ## Var Keyword
+Var is a keyword that allows the compiler to infer the type of a variable based on the value assigned to it.
+
     var age3 = 23; //Int32
     var bigNumber3 = -90000000L; //Int64
     var neg3 = -55.2D; //Double
@@ -116,6 +118,9 @@ Remainder (%)
 
 
 ## Const Keyword
+Const is a keyword that is used to declare a constant variable, 
+which means that its value cannot be changed after it has been assigned.
+
     const int vat = 20;
     //vat = 10; throws an error
 
@@ -293,6 +298,8 @@ Remainder (%)
 
 
 ## Numeric Formatting
+Numeric formatting is a way to control how numbers are displayed when converted to strings.
+
     double value = 1000D / 12.34D;
 
     Console.WriteLine(value);
@@ -417,6 +424,9 @@ Verbatim: @ negate all the escape characters, \ the back slash is used for escap
 
 
 ## String Interpolation ($)
+String Interpolation is a way to format strings by embedding expressions directly within string literals, 
+using the $ symbol before the string.
+
     string name = "Aba";
     int age = 23;
 
@@ -425,6 +435,8 @@ Verbatim: @ negate all the escape characters, \ the back slash is used for escap
 
 
 ## String Concatenation
+String Concatenation is the process of combining two or more strings into one string.
+
     string name = "Aba";
     int age = 23;
 
@@ -455,6 +467,8 @@ Verbatim: @ negate all the escape characters, \ the back slash is used for escap
 
 
 ## String Equals Function
+String.Equals is a method that compares two strings for equality, and it is case-sensitive by default.
+
     string message = "Hello";
     string compare = "Hello";
 
@@ -675,6 +689,7 @@ An array is a data structure that can hold a fixed number of values of the same 
     }
 
     Console.WriteLine(angleSum == 180 ? "Valid": "Invalid");
+
 
 ## Array Sorting
     int[] numbers = new int[]
@@ -1071,6 +1086,9 @@ void: means that the function does not return a value
 
 
 ## Function Parameters
+Function parameters are variables that are passed to a function when it is called, 
+and they allow the function to perform its task using the values provided by the caller.
+
     static void Main(string[] args)
     {
         Console.WriteLine(Add(5, 5));
@@ -1118,6 +1136,8 @@ void: means that the function does not return a value
 
 
 ## Optional Parameters
+Optional parameters are parameters that have a default value, and they can be omitted when calling the function.
+
     static void Main(string[] args)
     {
         int result = Add(5);
@@ -1143,6 +1163,8 @@ void: means that the function does not return a value
 
 
 ## Named Parameters
+Named parameters allow you to specify the arguments for a function by name, rather than by position
+
     static void Main(string[] args)
     {
         string nameInput = "Aba";
@@ -1164,7 +1186,10 @@ void: means that the function does not return a value
         Console.WriteLine($"Address: {address}");
     }
 
+
 ## Out Parameters
+Out parameters are parameters that are passed by reference and are used to return multiple values from a function.
+
     static void Main(string[] args)
     {
         int num = 0;
@@ -1228,6 +1253,7 @@ void: means that the function does not return a value
         num = 5;
         return true;
     }
+
 
 ## Reference Parameters
 Difference between ref and out parameters, is that out parameters must be assigned a value before the function returns, 
@@ -1369,6 +1395,7 @@ Good
         return false;
     }
 
+
 ## Exception Handling
 Exception handling is a mechanism to handle runtime errors in a controlled manner, 
 allowing the program to continue executing or gracefully terminate instead of crashing.
@@ -1383,6 +1410,38 @@ System.FormatException: 'The input string 'l' was not in a correct format.'
 
 
 ## Try... catch
+Try... catch is a block of code that is used to handle exceptions. 
+The code that may throw an exception is placed inside the try block, 
+and the code to handle the exception is placed inside the catch block.
+
+    bool looping = true;
+    while (looping)
+    {
+        try
+        {
+            Console.Write("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num);
+
+            looping = false;
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Please enter a number smaller than 2 billion");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Please only enter numbers");
+        }
+        catch (Exception) // catch all exceptions
+        {
+            Console.WriteLine("Something has went wrong");
+        }
+    }
+
+    Console.WriteLine("Goodbye!");
+
+    Console.ReadLine();
 
 
 ## Printing Error Messages
