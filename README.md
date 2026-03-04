@@ -1315,7 +1315,59 @@ Good
 
 
 ## Exercise: Sum of int Array
+    static void Main(string[] args)
+    {
+        int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 
+        int result = SumOfNumbers(numbers);
+        if (result > -1)
+        {
+            Console.WriteLine($"The total is: {result}");
+        }
+        else
+        {
+            Console.WriteLine("Cannot add up an empty array");
+        }
+
+        if (SumOfNumbers(numbers, out int total))
+        {
+            Console.WriteLine($"The total is: {total}");
+        }
+        else
+        {
+            Console.WriteLine("Cannot add up an empty array");
+        }
+
+        Console.ReadLine();
+    }
+
+    static int SumOfNumbers(int[] numbers)
+    {
+        if (numbers.Length > 0)
+        {
+            int total = 0;
+            foreach (int number in numbers)
+            {
+                total += number;
+            }
+            return total;
+        }
+        return -1;
+    }
+
+    static bool SumOfNumbers(int[] numbers, out int total)
+    {
+        total = 0;
+        if (numbers.Length > 0)
+        {
+            foreach (int number in numbers)
+            {
+                total += number;
+            }
+            return true;
+        }
+        return false;
+    }
 
 ## Exception Handling
 
