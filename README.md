@@ -1165,7 +1165,69 @@ void: means that the function does not return a value
     }
 
 ## Out Parameters
+    static void Main(string[] args)
+    {
+        int num = 0;
+        bool success = test(out num);
 
+        Console.WriteLine(num);
+        Console.WriteLine(success);
+
+        List<string> shoppingList = new List<string>
+        {"Milk", "Bread", "Eggs"};
+
+        Console.WriteLine(shoppingList.IndexOf("Milk"));
+
+        Console.WriteLine(FindInList("Milk", shoppingList, out int index));
+        Console.WriteLine(index);
+
+        Console.Write("Enter item to search for: ");
+        string search = Console.ReadLine();
+
+        if (FindInList(search, shoppingList, out index))
+        {
+            Console.WriteLine($"Found {search} at index {index}");
+        }
+        else
+        {
+            Console.WriteLine("Not found");
+        }
+
+        /*
+        int index = -1;
+        for (int i = 0; i < shoppingList.Count; i++)
+        {
+            if (shoppingList[i].ToLower().Equals("bread"))
+            {
+                index = i;
+            }
+        }
+        bool found = index > -1;
+        Console.WriteLine(found ? "Found" : "Not found");
+        */
+
+        Console.ReadLine();
+    }
+
+    static bool FindInList(string s, List<string> list, out int index)
+    {
+        index = -1;
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].ToLower().Equals(s.ToLower()))
+            {
+                index = i;
+            }
+        }
+         return index > -1;
+    }
+
+    static bool test(out int num)
+    {
+        num = 5;
+        return true;
+    }
 
 ## Reference Parameters
 
