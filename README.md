@@ -1230,8 +1230,67 @@ void: means that the function does not return a value
     }
 
 ## Reference Parameters
+Difference between ref and out parameters, is that out parameters must be assigned a value before the function returns, 
+while ref parameters must be initialized before being passed to the function. 
 
+Error
 
+    static void Assign(out int num)
+    {
+    }
+
+    ChangeName(ref int name, newName)
+    
+Good
+
+    static void Assign(ref int num)
+    {
+    }
+
+    string name = "Aba";
+    ChangeName(ref name, newName)
+
+    ChangeName(out int name, newName)
+
+<br>
+
+    static void Main(string[] args)
+    {
+        int num = 10;
+        Assign(ref num);
+
+        string name = "Aba";
+        Console.Write("Enter your new name: ");
+        string newName = Console.ReadLine();
+
+        if (ChangeName(ref name, newName))
+        {
+            Console.WriteLine($"Your new name is {newName}");
+        }
+        else
+        {
+            Console.WriteLine("New name cannot be empty or null");
+        }
+
+        Console.ReadLine();
+    }
+
+    static bool ChangeName(ref string name, string newName)
+    {
+        if (!string.IsNullOrEmpty(newName))
+        {
+            name = newName;
+            return true;
+        }
+        return false;
+    }
+
+    static void Assign(ref int num)
+    {
+        num = 20;
+    }
+    
+    
 ## Exercise: Area of a Triangle
 
 
