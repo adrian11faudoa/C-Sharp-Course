@@ -1370,6 +1370,16 @@ Good
     }
 
 ## Exception Handling
+Exception handling is a mechanism to handle runtime errors in a controlled manner, 
+allowing the program to continue executing or gracefully terminate instead of crashing.
+
+Example:
+
+    int num = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(num);
+
+If the user enters a non-numeric value, it will throw a:<br>
+System.FormatException: 'The input string 'l' was not in a correct format.'
 
 
 ## Try... catch
