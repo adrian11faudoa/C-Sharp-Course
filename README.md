@@ -1292,6 +1292,26 @@ Good
     
     
 ## Exercise: Area of a Triangle
+    static void Main(string[] args)
+    {  
+        int width = ReadInt("width");
+        int height = ReadInt("height");
+
+        Console.WriteLine($"The area is {CalcArea(width, height)}");
+
+        Console.ReadLine();
+    }
+
+    static int CalcArea(int width, int height)
+    {
+        return (width * height) / 2;
+    }
+
+    static int ReadInt(string message)
+    {
+        Console.Write($"Enter {message}: ");
+        return Convert.ToInt32(Console.ReadLine());
+    }
 
 
 ## Exercise: Sum of int Array
