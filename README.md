@@ -1447,44 +1447,54 @@ and the code to handle the exception is placed inside the catch block.
 ## Printing Error Messages
 
 
+
 ## Exercise: Custom TryParse
+
 
 
 ## Dabugging
 
 
+
 ## Local / auto Window 
+
 
 
 ## Watch Window
 
 
+
 ## Exercise: Fix Logic Error
+
 
 
 ## Structures
 
 
+
 ## Classes
+
 
 
 ## Class Functions
 
 
+
 ## Class Fields 
+
 
 
 ## Class Variable / Function Scope
 
 
+
 ## Class Properties
+
 
 
 ## Class ToString Function Overrid
 
 
+
 ## Outro?
-
-
-
 
