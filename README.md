@@ -1467,7 +1467,54 @@ and the code to handle the exception is placed inside the catch block.
 
 
 ## Exercise: Custom TryParse
+    static void Main(string[] args)
+    {
+        /*
+        bool success = false;
+        while (!success)
+        {
+            try
+            {
+                Console.Write("Enter a number: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(num);
+                success = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+            Console.WriteLine(success ? "Yey" : "Oh no");
+        }
+        */
+        Console.Write("Enter a number: ");
+        if (TryParse(Console.ReadLine(), out int result))
+        {
+            Console.WriteLine(result);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input");
+        }
 
+        Console.ReadLine();
+    }
+    
+    static bool TryParse(string input, out int result)
+    {
+
+        try
+        {
+            result = Convert.ToInt32(input);
+            return true;
+
+        }
+        catch (Exception)
+        {
+            result = -1;
+            return false;
+        }
+    }
 
 
 ## Dabugging
