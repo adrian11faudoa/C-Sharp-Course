@@ -1517,8 +1517,39 @@ and the code to handle the exception is placed inside the catch block.
     }
 
 
-## Dabugging
+## Debugging
+<p align="center">
+  <img src="images/screenshot.png" width="300">
+</p>
 
+    static void Main(string[] args)
+    {
+        string name = "Aba";
+        int age;
+        age = 23;
+
+        PrintDetails(name, age);
+
+        string message = ReadFromConsole("Enter anything: ");
+        Console.WriteLine(message);
+
+        Console.ReadLine();
+    }
+
+    static string ReadFromConsole(string message)
+    {
+            Console.Write(message);
+            return Console.ReadLine();
+    }
+
+    static void PrintDetails(string name, int age)
+    {
+        Console.WriteLine($"Name: {name}, Age: {age}");
+        Console.WriteLine($"Name: {name}, Age: {age}");
+        Console.WriteLine($"Name: {name}, Age: {age}");
+        Console.WriteLine($"Name: {name}, Age: {age}");
+        Console.WriteLine($"Name: {name}, Age: {age}");
+    }
 
 
 ## Local / auto Window 
