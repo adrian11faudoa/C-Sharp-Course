@@ -1709,7 +1709,52 @@ and they are typically used to represent simple data structures.
 
 
 ## Classes
+The difference between a class and a structure is that a structure constructure needs to have parameters,
+while a class constructor can be parameter less
 
+    /*
+    struct Person
+    {
+        public string name;
+        public int age;
+
+        public Person(string name = "", int age = 0)
+        {
+            this.name = name;
+            this.age = age;
+        }
+    }
+    */
+
+    class Person
+    {
+        public string name;
+        public int age;
+        public Person()
+        {
+        }
+        public Person(string name)
+        {
+            this.name = name;
+        }
+        public Person(int age)
+        {
+            this.age = age;
+        }
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+    }
+    static void Main(string[] args)
+    {
+        Person person = new Person("Aba", 23);
+        Console.WriteLine(person.name);
+        Console.WriteLine(person.age);
+
+        Console.ReadLine();
+    }
 
 
 ## Class Functions
