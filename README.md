@@ -1519,7 +1519,7 @@ and the code to handle the exception is placed inside the catch block.
 
 ## Debugging
 <p align="center">
-  <img src="images/screenshot.png" width="300">
+  <img src="images/Debugging.png" width="300">
 </p>
 
     static void Main(string[] args)
@@ -1552,8 +1552,16 @@ and the code to handle the exception is placed inside the catch block.
     }
 
 
-## Local / auto Window 
+## Local / Auto Window 
+### Autos Window
+<p align="center">
+  <img src="images/Autos.png" width="300">
+</p>
 
+### Locals Window
+<p align="center">
+  <img src="images/Locals.png" width="300">
+</p>
 
 
 ## Watch Window
