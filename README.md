@@ -1552,20 +1552,38 @@ and the code to handle the exception is placed inside the catch block.
     }
 
 
-## Local / Auto Window 
+##  Auto Window / Local Window
 ### Autos Window
+Shows variables that are automatically relevant to the current line of code.
+> Variables used in the current line <br>
+> Variables used in the previous line <br> 
+> Values returned by functions on that line <br>
+
 <p align="center">
   <img src="images/Autos.png" width="300">
 </p>
 
 ### Locals Window
+Shows all variables available in the current scope.
+> All local variables inside the current method/function <br>
+> Their current values <br>
+> Objects expanded with their properties <br>
+
 <p align="center">
   <img src="images/Locals.png" width="300">
 </p>
 
 
 ## Watch Window
+Add a Variable to the Watch Window
+<p align="center">
+  <img src="images/Watch_Var.png" width="300">
+</p>
 
+Watch Window 
+<p align="center">
+  <img src="images/Watch.png" width="300">
+</p>
 
 
 ## Exercise: Fix Logic Error
