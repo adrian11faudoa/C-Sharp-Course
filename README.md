@@ -1621,7 +1621,91 @@ To:
     
 
 ## Structures
+Structures are value types that can contain data and methods, 
+and they are typically used to represent simple data structures.
 
+    struct Person
+    {
+        public string name;
+        public int age;
+
+        public Person(string name, int age)
+        {
+            //Can't name = name,
+            //So change the global var "name" to something else, like "Name" and then assign it, like "Name = name";
+            this.name = name; 
+            this.age = age;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        string name = "Aba";
+        int age = 30;
+
+        Person person;
+        person.name = "Aba";
+        person.age = 30;
+
+        string newName = ReturnPerson(out int newAge);
+        
+        string newName2 = "";
+        int newAge2 = 0;
+        ReturnPerson2(ref newName2, ref newAge2);
+
+        Person person2 = ReturnPerson3();
+
+        Console.WriteLine($"{name} - {age}");
+        Console.WriteLine($"{person.name} - {person.age}");
+        Console.WriteLine($"{newName} - {newAge}");
+        Console.WriteLine($"{newName2} - {newAge2}");
+        Console.WriteLine($"{person2.name} - {person2.age}");
+
+        Console.ReadLine();
+    }
+
+    static string ReturnPerson(out int age)
+    {
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter your age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        return name;
+    }
+
+    static void ReturnPerson2(ref string name, ref int age)
+    {
+        Console.Write("Enter your name: ");
+        name = Console.ReadLine();
+
+        Console.Write("Enter your age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+
+    }
+
+    static Person ReturnPerson3()
+    {
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter your age: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+
+        /*
+            Person person;
+            person.name = name;
+            person.age = age;
+
+            return person;
+        */
+
+        //Because we have a constructor in the structure,
+        //We can directly return a new instance of the structure with the values assigned to it.
+        
+        return new Person(name, age);
+    }
 
 
 ## Classes
