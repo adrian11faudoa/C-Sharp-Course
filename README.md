@@ -1758,7 +1758,41 @@ while a class constructor can be parameter less
 
 
 ## Class Functions
+    class Person
+    {
+        public string name;
+        public int age;
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        public string ReturnDetails()
+        {
+            return $"Name: {name}, Age: {age}";
+        }
+    }
+    static void Main(string[] args)
+    {
+        Person person = new Person("Alice", 30);
+        //Console.WriteLine($"Name: {person.name}, Age: {person.age}");
+        //Console.WriteLine(ReturnDetails(person));
+        Console.WriteLine(person.ReturnDetails());
 
+        Console.ReadLine();
+    }
+    /*
+    static string ReturnDetails(Person person)
+    {
+        return $"Name: {person.name}, Age: {person.age}";
+    }
+    /*
+    /*
+    static string ReturnDetails(string name, int age)
+    {
+        return $"Name: {name}, Age: {age}";
+    }
+    */
 
 
 ## Class Fields 
