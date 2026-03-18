@@ -1796,7 +1796,78 @@ while a class constructor can be parameter less
 
 
 ## Class Fields 
+    class Person
+    {
+        //Change the access modifiers of the fields from public to private
+        private string name;
+        private int age;
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        /*public void SetName(string name)
+        {
+            if (!string.IsNullOrEmpty(name))
+            {
+                this.name = name;
+            }
+            else
+            {
+                this.name = "Invalid name";
+            }
+            this.name = !string.IsNullOrEmpty(name) ? name : "Invalid name";
 
+        }*/
+        /*public string GetName()
+        {
+            return name;
+        }*/
+
+        /*public void SetAge(int age)
+        {
+            if (age >= 0 && age <=150)
+            {
+                this.age = age;
+            }
+            else
+            {
+                this.age = -1;
+            }
+            this.age = age >= 0 && age <= 150 ? age : -1;
+
+        }*/
+        /*public int GetAge()
+        {
+            return age;
+        }*/
+
+        public void SetName(string name) => this.name = !string.IsNullOrEmpty(name) ? name : "Invalid name";
+        public string GetName() => name;
+
+        public void SetAge(int age) => this.age = age >= 0 && age <= 150 ? age : -1;
+        public int GetAge() => age;
+
+        public string ReturnDetails()
+        {
+            return $"Name: {name}, Age: {age}";
+        }
+    }
+    static void Main(string[] args)
+    {
+        Person person = new Person("Alice", 30);
+        Console.WriteLine(person.ReturnDetails());
+
+        //Was able to access the name field directly, but now it is private and cannot be accessed outside the class
+        //person.name = "Bob";
+        //person.age = 25;
+
+        person.SetName("Bob");
+        Console.WriteLine($"Your name is {person.GetName()}, and your age is {person.GetAge()}");
+
+
+        Console.ReadLine();
+    }
 
 
 ## Class Variable / Function Scope
