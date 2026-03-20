@@ -1871,7 +1871,28 @@ while a class constructor can be parameter less
 
 
 ## Class Variable / Function Scope
+Scope refers to the accessibility of variables and functions within different parts of a program.
+The compiler always prioritizes the local variable over the global variable if they have the same name
 
+    class Person
+    {
+        //Fields 
+        private string name;
+        private int age;
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        public void SetName(string name) => this.name = !string.IsNullOrEmpty(name) ? name : "Invalid name";
+        public string GetName() => name;
+        public void SetAge(int age) => this.age = age >= 0 && age <= 150 ? age : -1;
+        public int GetAge() => age;
+        public string ReturnDetails()
+        {
+            return $"Name: {name}, Age: {age}";
+        }
+    }
 
 
 ## Class Properties
