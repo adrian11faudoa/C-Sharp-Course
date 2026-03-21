@@ -2017,6 +2017,3 @@ The compiler always prioritizes the local variable over the global variable if t
         Console.ReadLine();
     }
 
-
-## Outro?
-
